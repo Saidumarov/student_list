@@ -23,12 +23,13 @@ body {
 .wrapper{
     width: 100%;
     display: flex;
+    
 
 }
 .bar{
     width: 300px;
     height: 100vh;
-    background-color: #38A169;
+     background-color: #1A202C;
 }
 
 .res-con {
@@ -40,15 +41,86 @@ body {
     margin: 8px auto 0 auto;
     align-items: center;
     border-radius: 6px;
+    
   
    
 
 }
 
-/* .button.active{
-    color: red;
-} */
+.fan{
+    width: 250px;
+    height: 50px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    background-color: #212632;
+    margin: 0 auto;
+    margin-top: 130px;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    font-family: sans-serif;
+    padding-left: 25px;
+}
+.english{
+    width: 250px;
+    height: 50px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 30px;
+    transition: .2s;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    font-family: sans-serif;
+    padding-left: 25px;
 
+
+}
+.english:hover{
+    background-color: #212632;
+}
+.mate{
+    width: 250px;
+    height: 50px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 30px;
+    transition: .2s;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    font-family: sans-serif;
+    padding-left: 25px;
+
+
+}
+.mate:hover{
+    background-color: #212632;
+}
+.it{
+    width: 250px;
+    height: 50px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 30px;
+    transition: .2s;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    font-family: sans-serif;
+    padding-left: 25px;
+
+}
+.it:hover{
+    background-color: #212632;
+}
 .bush {
     height: 35px;
 }
@@ -201,8 +273,17 @@ nav {
     position: fixed;
     top: 0;
     z-index: 2;
+ 
 }   
 
+.border{
+    width: 100%;
+    height: 1px;
+    background-color:white;
+    position: absolute;
+    bottom: 0;
+    opacity: .2;
+}
 .search {
     width: 400px;
     height: 35px;
@@ -281,19 +362,19 @@ nav {
 }
 
 .img {
-    width: 20px;
-    height: 20px;
+    width: 17px;
+    height: 17px;
     position: absolute;
     z-index: -1;
-    border-radius: 10px;
+
 
 }
 
 .img1 {
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
     position: absolute;
-    border-radius: 10px;
+
 
 
 }
@@ -376,18 +457,32 @@ nav {
         font-family: sans-serif;
     }
     
+
+}
+@media screen and (max-width:1430px) {
+.bar{
+    margin-right: 40px;
+}
+.wrapper{
+    width: 95%;
+}
+}
+
+@media screen and (max-width:1305px) {
     .bar {
         width: 80.8%;
         height: 100%;
         position: absolute;
         position: fixed;
-        background-color: #ebe9e9;
         z-index: 5;
         transition: .5s;
         left: -100%;
         top: 0;
+        z-index: 1;
     }
-
+    .wrapper{
+        width: 100%;
+    }
     .bar1 {
         width: 60px;
         height: 50px;
@@ -403,7 +498,7 @@ nav {
     .barr {
         width: 40px;
         height: 3px;
-        background-color: #000000;
+        background-color: white;
         margin: 5px auto 0 auto;
 
     }
@@ -427,6 +522,18 @@ nav {
     }
 
 }
+@media screen and (max-width:750px) {
+    .dum {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        background-color: rgb(237, 241, 244);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px 0 0 48px;
+    }
+}
 
 @media screen and (max-width:840px) {
     .res-con {
@@ -441,6 +548,10 @@ nav {
         flex-wrap: wrap;
 
 
+    }
+    .con{
+        height: auto;
+        margin-bottom: 20px;
     }
     .bush {
         height: 20px;
@@ -498,6 +609,110 @@ nav {
     }
 
 }
+@media screen and (max-width:680px) {
+    .search {
+        width: 200px;
+        height: 35px;
+        margin: 25px 0 0 30px;
+        border-radius: 8px;
+        border: none;
+        padding-left: 30px;
+        font-size: 15px;
+        font-family: sans-serif;
+    }
+    
+
+}
+@media screen and (max-width:660px) {
+    .dum {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        background-color: rgb(237, 241, 244);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px 0 0 48px;
+    }
+
+    nav {
+        width: 100%;
+        height: 120px;
+        background-color: #1A202C;
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+        flex-wrap: wrap;
+    }
+
+    .modall {
+        width: 100%;
+        height: 100%;
+        background-color: #2D3748;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        opacity: .5;
+
+        ;
+    }
+
+    .search {
+        width: 80%;
+        height: 35px;
+        margin: 10px 0 0 0px;
+        border-radius: 8px;
+        border: none;
+        padding-left: 30px;
+        font-size: 15px;
+        font-family: sans-serif;
+        position: absolute;
+        left: 42px;
+
+    }
+    .bar1{
+        margin-top: -10px;
+    }
+
+    #i {
+        margin-left: 150px;
+        background-color: white;
+        position: absolute;
+        margin-top: 20px;
+    }
+
+    .modal h2 {
+        font-size: 32px;
+        color: white;
+        font-family: poppins;
+        padding: 0px 0 0 30px;
+        margin-top: -50px;
+    }
+
+    .add {
+
+        margin: -50px 0 0 20px;
+    }
+
+    .dum {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        background-color: rgb(237, 241, 244);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: -50px 0 0 20px;
+    }
+
+    .con {
+        margin-top: 140px;
+    }
+
+}
 
 @media screen and (max-width:600px) {
     .dum {
@@ -509,6 +724,10 @@ nav {
         align-items: center;
         justify-content: center;
         margin: 20px 0 0 48px;
+    }
+    .fan{
+    
+        margin-top: 160px;
     }
     .kel{
         width: 170px;
@@ -642,6 +861,15 @@ nav {
         position: absolute;
         margin-top: 20px;
     }
+    .bar1{
+       margin-top: -10px;
+    }
+
+}
+@media screen and (max-width:430px) {
+.add{
+    width: 100px;
+}
 }
 
 @media screen and (max-width:400px) {
@@ -659,7 +887,20 @@ nav {
         right: 10px;
     
     }
+    .modal{
+        width: 100%;
+    }
     
+}
+
+@media screen and (max-width:380px) {
+    .modal h2 {
+        font-size: 32px;
+        color: white;
+        font-family: poppins;
+        padding: 0px 0 0 20px;
+        margin-top: -50px;
+    }
 }
 
 @media screen and (max-width:1000px) {

@@ -155,9 +155,15 @@ const Menyu = (y) => {
             />
           </div>
         </div>
+        <div className="border"></div>
       </nav>
       <div className="wrapper">
-        <div className="bar"></div>
+        <div className="bar">
+         <div className="fan">Tarix</div>
+         <div className="english">English</div>
+         <div className="mate">Matematika</div>
+         <div className="it">IT dasturlash</div>
+        </div>
         <div className="con">
           {modal && <div className="modall" style={{ display: "block" }}></div>}
 
