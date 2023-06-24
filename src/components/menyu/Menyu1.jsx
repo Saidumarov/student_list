@@ -3,43 +3,46 @@ const Data = () => {
   const data = [
     {
       id: 1,
-      ism: "Jafarxon",
-      familya: "Saidumarov",
+    
+      ism: "Akmal",
+      familya: "Diyorov",
     },
     {
       id: 2,
-      ism: "Azim",
-      familya: "Narzullayev",
-    },
-    {
-      id: 3,
-      ism: "Akmal",
-      familya: "Diyorov",
-    },
-    {
-      id: 4,
+  
       ism: "Alisher",
       familya: "Bobomurodov",
     },
     {
-      id: 5,
+      id: 3,
       ism: "Jafarxon",
       familya: "Saidumarov",
     },
     {
-      id: 6,
+      id: 4,
+      ism: "Azim",
+      familya: "Narzuaxsdfllayev",
+    },
+    {
+      id: 5,
       ism: "Azim",
       familya: "Narzullayev",
     },
     {
+      id: 6,
+      ism: "Jafarxon",
+      familya: "Saidumarov",
+    },
+    {
       id: 7,
-      ism: "Akmal",
-      familya: "Diyorov",
+ 
+      ism: "Alisher",
+      familya: "Bobomurodov",
     },
     {
       id: 8,
-      ism: "Alisher",
-      familya: "Bobomurodov",
+      ism: "Akmal",
+      familya: "Diyorov",
     },
   ];
 
@@ -78,7 +81,7 @@ const Data = () => {
     let message = "";
 
     const currentDate = new Date().toLocaleString();
-    message += "Fan: " + "Tarix" + "\n\n";
+    message += "Fan: " + "English" + "\n\n";
     ids.forEach((id) => {
       message += "ID: " + id + "\n";
       message += "Familya: " + familya[id] + "\n";

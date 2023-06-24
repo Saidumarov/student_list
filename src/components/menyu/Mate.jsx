@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-const Data = () => {
-  const data = [
+const Mate = () => {
+  const Mate = [
     {
       id: 1,
       ism: "Jafarxon",
@@ -43,7 +43,7 @@ const Data = () => {
     },
   ];
 
-  const States = data.reduce(
+  const States = Mate.reduce(
     (props, item) => {
       props.familya[item.id] = item.familya;
       props.ism[item.id] = item.ism;
@@ -78,7 +78,7 @@ const Data = () => {
     let message = "";
 
     const currentDate = new Date().toLocaleString();
-    message += "Fan: " + "Tarix" + "\n\n";
+    message += "Fan: " + "Matematika" + "\n\n";
     ids.forEach((id) => {
       message += "ID: " + id + "\n";
       message += "Familya: " + familya[id] + "\n";
@@ -99,15 +99,15 @@ const Data = () => {
       },
     })
       .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
+      .then((Mate) => {
+        console.log(Mate);
         setTextContent(States.textContent);
       });
   };
 
   return (
     <div>
-      {data.map((item) => (
+      {Mate.map((item) => (
         <div className="res-con" key={item.id}>
           <p className="pe">
             <p className="p">{item.id}</p>
@@ -141,4 +141,4 @@ const Data = () => {
   );
 };
 
-export default Data;
+export default Mate;

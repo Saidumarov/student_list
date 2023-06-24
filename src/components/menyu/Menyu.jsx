@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from "react";
+import { Link, Outlet } from "react-router-dom";
 import "./menyu.css";
 import img from "../../assets/oy1.png";
 import img1 from "../../assets/quyosh1.png";
-import Data from "./Data";
+import eng from "../../assets/en.png";
+import tarix from "../../assets/tarix.png";
+import it from "../../assets/it.png";
+import mat from "../../assets/ed.png";
 
-const Menyu = (y) => {
+
+const Menyu = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [Names, setNames] = useState([]);
@@ -60,14 +65,55 @@ const Menyu = (y) => {
     document.querySelector("modal , h2").style.color = "";
     document.querySelector(".img").style.zIndex = "-1";
     document.querySelector(".img1").style.zIndex = "1";
+    document.querySelector(".bar").style.backgroundColor = "";
+    document.querySelector(".fan").style.backgroundColor = "";
+
+    document.querySelectorAll(".barr").forEach((e) => {
+      e.style.backgroundColor = "";
+    });
+    document.querySelectorAll(".fan, .mate, .it , .english").forEach((e) => {
+      e.style.color = "";
+    });
+    document.querySelectorAll(" .mate, .it , .english").forEach((e) =>{
+      e.addEventListener('mouseover', function() {
+        e.style.backgroundColor = '';
+      });
+      
+    })  
+    document.querySelectorAll(" .mate, .it , .english").forEach((e) =>{
+      e.addEventListener('mouseout', function() {
+        e.style.backgroundColor = '';
+      });
+      
+    })
   };
   const handleButtonClick1 = () => {
     setColor((Color) => (Color === "white" ? "white" : "white"));
     document.querySelector("nav").style.backgroundColor = "#ebeff1";
+    document.querySelector(".bar").style.backgroundColor = "#ebeff1";
+    document.querySelector(".fan").style.backgroundColor = "white";
     document.querySelector(".con").style.backgroundColor = "#E2E8F0";
     document.querySelectorAll(".res-con").forEach((e) => {
       e.style.backgroundColor = "#F7FAFC";
     });
+    document.querySelectorAll(".fan, .mate, .it , .english").forEach((e) => {
+      e.style.color = "#1A202C";
+    });
+    document.querySelectorAll(".barr").forEach((e) => {
+      e.style.backgroundColor = "#1A202C";
+    });
+  document.querySelectorAll(" .mate, .it , .english").forEach((e) =>{
+    e.addEventListener('mouseover', function() {
+      e.style.backgroundColor = 'white';
+    });
+    
+  })  
+  document.querySelectorAll(" .mate, .it , .english").forEach((e) =>{
+    e.addEventListener('mouseout', function() {
+      e.style.backgroundColor = '';
+    });
+    
+  }) 
     document.querySelectorAll(".s").forEach((e) => {
       e.style.color = "#302033";
     });
@@ -105,18 +151,19 @@ const Menyu = (y) => {
     setModal(false);
   };
 
-  
   function bar1() {
-    const bar = document.querySelector(".bar")
-    let bar1 = document.querySelector(".bar1")
-    let dis = document.querySelector(".dis")
+    const bar = document.querySelector(".bar");
+    let bar1 = document.querySelector(".bar1");
+    bar1.classList.toggle("active");
+    bar.classList.toggle("active");
+  }
 
-    bar1.classList.toggle("active")
-    bar.classList.toggle("active")
-    // dis.classList.toggle("active")
+  const [dis, setDis] = useState();
+  const of = () => {
+    setDis("none");
+  };
 
-}
-
+  
   return (
     <div>
       <nav>
@@ -157,12 +204,23 @@ const Menyu = (y) => {
         </div>
         <div className="border"></div>
       </nav>
+
       <div className="wrapper">
         <div className="bar">
-         <div className="fan">Tarix</div>
-         <div className="english">English</div>
-         <div className="mate">Matematika</div>
-         <div className="it">IT dasturlash</div>
+          <Link className="a" to="/">
+            <div className="fan" onClick={() => setDis("block")}>
+            <img src={tarix} alt="" />  Tarix
+            </div>
+          </Link>
+          <Link className="a" to="/english" onClick={of}>
+            <div className="english"><img src={eng} alt="" /> English</div>
+          </Link>
+          <Link className="a" to="/matematika">
+            <div className="mate"> <img src={mat} alt="" /> Matematika</div>
+          </Link>
+          <Link className="a" to="/IT">
+            <div className="it"> <img src={it} alt="" /> IT dasturlash</div>
+          </Link>
         </div>
         <div className="con">
           {modal && <div className="modall" style={{ display: "block" }}></div>}
@@ -201,7 +259,8 @@ const Menyu = (y) => {
 
           <div className="item-con">
             <div className="bush"></div>
-            <Data />
+
+            <Outlet />
             <div className="bush1"></div>
           </div>
         </div>

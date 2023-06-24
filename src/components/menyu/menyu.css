@@ -6,6 +6,7 @@
 
 body {
     background-color: #171923;
+
 }
 
 .con {
@@ -15,21 +16,23 @@ body {
     margin-top: 100px;
     border-radius: 4px;
     height: 500px;
-    
+
+
 
 }
 
 
-.wrapper{
+.wrapper {
     width: 100%;
     display: flex;
-    
+
 
 }
-.bar{
+
+.bar {
     width: 300px;
     height: 100vh;
-     background-color: #1A202C;
+    background-color: #1A202C;
 }
 
 .res-con {
@@ -41,13 +44,14 @@ body {
     margin: 8px auto 0 auto;
     align-items: center;
     border-radius: 6px;
-    
-  
-   
+
+
+
+
 
 }
 
-.fan{
+.fan {
     width: 250px;
     height: 50px;
     border-radius: 6px;
@@ -62,7 +66,8 @@ body {
     font-family: sans-serif;
     padding-left: 25px;
 }
-.english{
+
+.english {
     width: 250px;
     height: 50px;
     border-radius: 6px;
@@ -79,10 +84,36 @@ body {
 
 
 }
-.english:hover{
+
+.english:hover {
     background-color: #212632;
 }
-.mate{
+
+.english img{
+    width: 40px;
+    height: 30px;
+    margin-right: 6px;
+}
+.mate img{
+    width: 25px;
+    height: 25px;
+    margin-right: 6px;
+}
+
+.it img{
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.fan img{
+    width: 40px;
+    height: 35px;
+    margin-right: 6px;
+}
+
+
+.mate {
     width: 250px;
     height: 50px;
     border-radius: 6px;
@@ -99,10 +130,12 @@ body {
 
 
 }
-.mate:hover{
+
+.mate:hover {
     background-color: #212632;
 }
-.it{
+
+.it {
     width: 250px;
     height: 50px;
     border-radius: 6px;
@@ -118,12 +151,15 @@ body {
     padding-left: 25px;
 
 }
-.it:hover{
+
+.it:hover {
     background-color: #212632;
 }
+
 .bush {
     height: 35px;
 }
+
 .bush1 {
     height: 65px;
 }
@@ -149,14 +185,16 @@ body {
     font-family: sans-serif;
 
 }
-.item-con{
-/* background-color: #38A169; */
-margin-bottom: 30px;
-   
+
+.item-con {
+    /* background-color: #38A169; */
+    margin-bottom: 30px;
+
 }
 
 .pe {
     width: 10%;
+
 }
 
 .pe1 {
@@ -168,13 +206,13 @@ margin-bottom: 30px;
     width: 28%;
 }
 
-.kel{
+.kel {
     width: 170px;
     display: flex;
     justify-content: center;
 }
 
-.kel button{
+.kel button {
     width: 100px;
     height: 25px;
     margin: 0px 0 0 20px;
@@ -192,7 +230,7 @@ margin-bottom: 30px;
     float: left;
 }
 
-.bos{
+.bos {
     width: 120px;
     height: 35px;
     margin: 15px 0 0 80%;
@@ -255,10 +293,15 @@ margin-bottom: 30px;
     cursor: pointer;
 }
 
+.a{
+    text-decoration: none;
+}
+
 .add:hover {
     box-shadow: 1px 1px 3px 3px #38A169;
 
 }
+
 .bos:hover {
     box-shadow: 1px 1px 3px 3px #38A169;
 
@@ -273,17 +316,19 @@ nav {
     position: fixed;
     top: 0;
     z-index: 2;
- 
-}   
 
-.border{
+
+}
+
+.border {
     width: 100%;
     height: 1px;
-    background-color:white;
+    background-color: white;
     position: absolute;
     bottom: 0;
     opacity: .2;
 }
+
 .search {
     width: 400px;
     height: 35px;
@@ -304,7 +349,7 @@ nav {
     height: 300px;
     position: fixed;
     background-color: #718096;
-    margin-left: 350px;
+    margin-left: 250px;
     z-index: 5;
     border-radius: 5px;
     margin-top: 40px;
@@ -378,11 +423,12 @@ nav {
 
 
 }
-.cap{
+
+.cap {
     width: 40px;
     height: 40px;
     border-radius: 8px;
-    background-color:#ffffff;
+    background-color: #ffffff;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -444,6 +490,11 @@ nav {
     }
 }
 
+@media screen and (max-width:900px) {
+    .dum {
+        margin-left: 50px;
+    }
+}
 
 @media screen and (max-width:850px) {
     .search {
@@ -456,33 +507,26 @@ nav {
         font-size: 15px;
         font-family: sans-serif;
     }
-    
+
 
 }
+
 @media screen and (max-width:1430px) {
-.bar{
-    margin-right: 40px;
-}
-.wrapper{
-    width: 95%;
-}
+    .bar {
+        margin-right: 40px;
+    }
+
+    .wrapper {
+        width: 95%;
+    }
 }
 
 @media screen and (max-width:1305px) {
-    .bar {
-        width: 80.8%;
-        height: 100%;
-        position: absolute;
-        position: fixed;
-        z-index: 5;
-        transition: .5s;
-        left: -100%;
-        top: 0;
-        z-index: 1;
-    }
-    .wrapper{
+
+    .wrapper {
         width: 100%;
     }
+
     .bar1 {
         width: 60px;
         height: 50px;
@@ -493,7 +537,19 @@ nav {
         position: fixed;
     }
 
- 
+    .bar {
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        position: fixed;
+        z-index: 5;
+        transition: .5s;
+        left: -100%;
+        top: 0;
+        z-index: 1;
+    }
+
+
 
     .barr {
         width: 40px;
@@ -522,6 +578,7 @@ nav {
     }
 
 }
+
 @media screen and (max-width:750px) {
     .dum {
         width: 40px;
@@ -549,21 +606,24 @@ nav {
 
 
     }
-    .con{
+
+    .con {
         height: auto;
         margin-bottom: 20px;
     }
+
     .bush {
         height: 20px;
     }
-    .kel{
+
+    .kel {
         width: 170px;
         display: flex;
         justify-content: center;
         position: absolute;
         right: 100px;
     }
-    
+
 
     .pe {
         width: 100%;
@@ -605,10 +665,11 @@ nav {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 20px 0 0 48px;
+        margin: 20px 0 0 800px;
     }
 
 }
+
 @media screen and (max-width:680px) {
     .search {
         width: 200px;
@@ -620,9 +681,10 @@ nav {
         font-size: 15px;
         font-family: sans-serif;
     }
-    
+
 
 }
+
 @media screen and (max-width:660px) {
     .dum {
         width: 40px;
@@ -673,7 +735,8 @@ nav {
         left: 42px;
 
     }
-    .bar1{
+
+    .bar1 {
         margin-top: -10px;
     }
 
@@ -705,7 +768,7 @@ nav {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: -50px 0 0 20px;
+        margin: -50px 0 0 190px;
     }
 
     .con {
@@ -725,24 +788,26 @@ nav {
         justify-content: center;
         margin: 20px 0 0 48px;
     }
-    .fan{
-    
+
+    .fan {
+
         margin-top: 160px;
     }
-    .kel{
+
+    .kel {
         width: 170px;
         display: flex;
         justify-content: center;
         position: absolute;
         right: 60px;
     }
-    
-.bos{
-    width: 120px;
-    height: 35px;
-    margin: 15px 0 0 60%;
 
-}
+    .bos {
+        width: 120px;
+        height: 35px;
+        margin: 15px 0 0 60%;
+
+    }
 
 
     nav {
@@ -812,7 +877,7 @@ nav {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: -50px 0 0 20px;
+        margin: -50px 0 0 50px;
     }
 
     .con {
@@ -820,6 +885,19 @@ nav {
     }
 }
 
+@media screen and (max-width:450px) {
+
+    .dum {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        background-color: rgb(237, 241, 244);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: -50px 0 0 20px;
+    }
+}
 
 @media screen and (max-width:545px) {
     #i {
@@ -828,15 +906,28 @@ nav {
         position: absolute;
         margin-top: 20px;
     }
-    .kel{
+
+    .kel {
         width: 170px;
         display: flex;
         justify-content: center;
         position: absolute;
         right: 30px;
-    
+
     }
-    
+
+    .bar {
+        width: 80.8%;
+        height: 100%;
+        position: absolute;
+        position: fixed;
+        z-index: 5;
+        transition: .5s;
+        left: -100%;
+        top: 0;
+        z-index: 1;
+    }
+
 }
 
 @media screen and (max-width:485px) {
@@ -846,11 +937,12 @@ nav {
         position: absolute;
         margin-top: 20px;
     }
-    .bos{
+
+    .bos {
         width: 120px;
         height: 35px;
         margin: 15px 0 0 50%;
-    
+
     }
 }
 
@@ -861,36 +953,40 @@ nav {
         position: absolute;
         margin-top: 20px;
     }
-    .bar1{
-       margin-top: -10px;
+
+    .bar1 {
+        margin-top: -10px;
     }
 
 }
+
 @media screen and (max-width:430px) {
-.add{
-    width: 100px;
-}
+    .add {
+        width: 100px;
+    }
 }
 
 @media screen and (max-width:400px) {
     #i {
-        margin-left: 10px;
+        margin-left: 50px;
         background-color: white;
         position: absolute;
         margin-top: 20px;
     }
-    .kel{
+
+    .kel {
         width: 170px;
         display: flex;
         justify-content: center;
         position: absolute;
         right: 10px;
-    
+
     }
-    .modal{
+
+    .modal {
         width: 100%;
     }
-    
+
 }
 
 @media screen and (max-width:380px) {
@@ -912,7 +1008,7 @@ nav {
         margin-left: 250px;
         z-index: 5;
         border-radius: 5px;
-    
+
 
     }
 
@@ -927,7 +1023,7 @@ nav {
         margin-left: 150px;
         z-index: 5;
         border-radius: 5px;
-    
+
 
     }
 
@@ -942,7 +1038,7 @@ nav {
         margin-left: 90px;
         z-index: 5;
         border-radius: 5px;
-    
+
 
     }
 
@@ -957,7 +1053,7 @@ nav {
         margin-left: 40px;
         z-index: 5;
         border-radius: 5px;
-    
+
 
     }
 
@@ -972,7 +1068,7 @@ nav {
         margin-left: 40px;
         z-index: 5;
         border-radius: 5px;
-    
+
 
     }
 
@@ -987,7 +1083,7 @@ nav {
         margin-left: 20px;
         z-index: 5;
         border-radius: 5px;
-    
+
 
     }
 
@@ -1002,7 +1098,7 @@ nav {
         margin-left: 5px;
         z-index: 5;
         border-radius: 5px;
-    
+
 
     }
 
@@ -1017,7 +1113,7 @@ nav {
         margin-left: 0px;
         z-index: 5;
         border-radius: 5px;
-    
+
 
     }
 
