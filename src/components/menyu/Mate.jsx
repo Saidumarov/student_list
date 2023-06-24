@@ -136,7 +136,6 @@ const Mate = () => {
       <button onClick={handleSubmit} className="bos">
         Yuborish
       </button>
-      
     </div>
   );
 };
