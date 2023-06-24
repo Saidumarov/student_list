@@ -173,9 +173,9 @@ const Menyu = () => {
             <div className="barr" style={{ transition: ".2s" }}></div>
             <div className="barr" style={{ transition: ".4s" }}></div>
           </div>
-          <h2>Forms</h2>
+          <h2><i>Forms</i></h2>
           <button onClick={openModal} className="add">
-            Add New
+          <i>  Add New</i>
           </button>
           <div>
             <input
