@@ -9,6 +9,8 @@ import it from "../../assets/it.png";
 import mat from "../../assets/ed.png";
 
 
+
+
 const Menyu = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -158,10 +160,17 @@ const Menyu = () => {
     bar.classList.toggle("active");
   }
 
-  const [dis, setDis] = useState();
-  const of = () => {
-    setDis("none");
-  };
+ 
+
+  const [colors , setColors] = useState()
+  const [colors1 , setColors1] = useState()
+  const [colors2 , setColors2] = useState()
+  const [colors3 , setColors3] = useState()
+
+
+
+
+
 
   
   return (
@@ -173,7 +182,7 @@ const Menyu = () => {
             <div className="barr" style={{ transition: ".2s" }}></div>
             <div className="barr" style={{ transition: ".4s" }}></div>
           </div>
-          <h2><i>Forms</i></h2>
+         <Link className="a" to='/'> <h2 ><i>Forms</i></h2></Link>
           <button onClick={openModal} className="add">
           <i>  Add New</i>
           </button>
@@ -206,20 +215,19 @@ const Menyu = () => {
       </nav>
 
       <div className="wrapper">
-        <div className="bar">
-          <Link className="a" to="/">
-            <div className="fan" onClick={() => setDis("block")}>
-            <img src={tarix} alt="" />  Tarix
-            </div>
+        <div className="bar" >
+          <Link className="a" to="/tarix" >
+            <div className="fan" onClick={() => setColors3("#212632") || setColors1("") || setColors("") ||setColors2 ("") } style={{backgroundColor:colors3}}>
+            <img src={tarix} alt="" />  Tarix </div>
           </Link>
-          <Link className="a" to="/english" onClick={of}>
-            <div className="english"><img src={eng} alt="" /> English</div>
+          <Link className="a" to="/english" >
+            <div className="english" onClick={() => setColors("#212632") || setColors1("") ||  setColors2 ("") } style={{backgroundColor:colors}}><img src={eng} alt="" /> English</div>
           </Link>
           <Link className="a" to="/matematika">
-            <div className="mate"> <img src={mat} alt="" /> Matematika</div>
+            <div className="mate" onClick={() => setColors1("#212632") || setColors ("") || setColors2 ("") } style={{backgroundColor:colors1}}> <img src={mat} alt="" /> Matematika</div>
           </Link>
           <Link className="a" to="/IT">
-            <div className="it"> <img src={it} alt="" /> IT dasturlash</div>
+            <div className="it"  onClick={() => setColors2("#212632") ||  setColors1 ("") ||  setColors ("") }  style={{backgroundColor:colors2}}> <img src={it} alt="" /> IT dasturlash</div>
           </Link>
         </div>
         <div className="con">
@@ -259,6 +267,7 @@ const Menyu = () => {
 
           <div className="item-con">
             <div className="bush"></div>
+           
 
             <Outlet />
             <div className="bush1"></div>

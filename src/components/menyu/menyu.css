@@ -13,7 +13,7 @@ body {
     width: 1100px;
     margin: 0 auto;
     background-color: #1A202C;
-    margin-top: 100px;
+    margin-top: 130px;
     border-radius: 4px;
     height: 500px;
 
@@ -44,11 +44,6 @@ body {
     margin: 8px auto 0 auto;
     align-items: center;
     border-radius: 6px;
-
-
-
-
-
 }
 
 .fan {
@@ -164,6 +159,32 @@ body {
     height: 65px;
 }
 
+.svg{
+    width: 100px;
+    height: 200px;
+    margin-left: 200px;
+}
+
+.jpg1{
+    width: 420px;
+    height: 400px;
+    margin: 0 auto;
+    margin-top: 14px;
+}
+.jpg{
+    width: 100%;
+    height:100%;
+    border-radius: 15px;
+    opacity: .5;
+    background-color: #2D3748;
+ 
+
+
+}
+
+.kuim img{
+    background-color: #38a16947;
+}
 
 .p1 {
     color: white;
@@ -468,7 +489,7 @@ nav {
         width: 90%;
         margin: 0 auto;
         background-color: #1A202C;
-        margin-top: 90px;
+        margin-top: 120px;
         border-radius: 4px;
 
     }
@@ -604,6 +625,14 @@ nav {
         border-radius: 6px;
         flex-wrap: wrap;
 
+
+    }
+    .jpg1{
+        width: 420px;
+        height: 400px;
+        margin: 0 auto;
+        margin-top: 30px;
+        margin-bottom: -45px;
 
     }
 
@@ -807,6 +836,13 @@ nav {
         height: 35px;
         margin: 15px 0 0 60%;
 
+    }
+    .jpg1{
+        width: 90%;
+        height: 320px;
+        margin: 0 auto;
+        margin-top: 25px;
+        margin-bottom: -50px;
     }
 
 

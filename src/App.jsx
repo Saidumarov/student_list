@@ -3,7 +3,7 @@ import Menyu1 from "./components/menyu/Menyu1";
 import Menyu from "./components/menyu/Menyu";
 import Mate from "./components/menyu/Mate";
 import Data from "./components/menyu/Data";
-// import "./components/menyu/menyu.css"
+import Jpg from "./components/Jpg";
 
 function App() {
   return (
@@ -12,7 +12,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Menyu />}>
-            <Route index element={<Data />} />
+            <Route index element={<Jpg />} />
+            <Route path="/tarix" element={<Data />} />
             <Route path="/english" element={<Menyu1 />} />
             <Route path="matematika" element={<Mate />} />
             <Route path="IT" element={<Menyu1 />} />
