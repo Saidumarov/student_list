@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-con{
+    width: 100%;
+    height: 100%;
+    margin-top: 0px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 350px;
+    margin-top: -20px;
+
+}
+
+.imgg {
+    width: 155px;
+    height: 130px;
+    background-color: antiquewhite;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+h1 {
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: center;
+    color: #000000;
+    padding-top: 40px;
+}
+
+.chet{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+ background-color: #33A169;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.form {
+    width: 75%;
+    margin: 0 auto;
+}
+
+input {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    border: none;
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+
+}
+
+#username {
+    margin-top: 50px;
+    font-size: 17px;
+    padding-left: 35px;
+}
+
+#password {
+    margin-top: 20px;
+    font-size: 17px;
+    padding-left: 35px;
+
+
+}
+
+#parol1 {
+    position: absolute;
+    margin: 35px 0 0 15px;
+    font-size: 19px;
+}
+
+#log1 {
+    position: absolute;
+    margin: 15px 0 0 15px;
+    font-size: 18px;
+
+}
+
+button {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;                                                     
+    border: none;
+    background: #383e4e;
+    border: 1px solid #DDDDDD;
+    margin-top: 30px;
+    font-size: 22px;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: .2s;
+
+}
+
+button:hover {
+    background: #292e3a;
+
+}
+.tasdiq{
+    width: 200px;
+    height: 45px;
+    background: #383e4e;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+     color: white;
+     font-family: sans-serif;
+     border-radius: 5px;
+     transition: .4s;
+     /* opacity: -1; */
+}
+
+body{
+    background-color: white;
+}
