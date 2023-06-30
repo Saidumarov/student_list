@@ -1,14 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Menyu1 from "./components/menyu/Menyu1";
-import Menyu from "./components/menyu/Menyu";
-import Mate from "./components/menyu/Mate";
-import Data from "./components/menyu/Data";
-import Jpg from "./components/Jpg";
+import Menyu1 from "./menyu/Menyu1";
+import Menyu from "./menyu/Menyu";
+import Mate from "./menyu/Mate";
+import Data from "./menyu/Data";
+import Jpg from "./menyu/Jpg";
 
 function App() {
   return (
     <div>
-      {/* <Menyu/> */}
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Menyu />}>

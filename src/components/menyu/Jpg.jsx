@@ -1,5 +1,5 @@
 import React from 'react'
-import jpg from "../assets/ii.jpg"
+import jpg from "../../assets/ii.jpg"
 
 const Jpg = () => {
   return (

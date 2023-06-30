@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, Outlet } from "react-router-dom";
 import "./menyu.css";
-import img from "../../assets/oy1.png";
-import img1 from "../../assets/quyosh1.png";
 import eng from "../../assets/en.png";
+import cap from "../../assets/cap.svg";
 import tarix from "../../assets/tarix.png";
 import it from "../../assets/it.png";
 import mat from "../../assets/ed.png";
@@ -44,103 +43,6 @@ const Menyu = () => {
     setModal(true);
   };
 
-  const [Color, setColor] = useState();
-
-  useEffect(() => {
-    document.body.style.backgroundColor = Color;
-  }, [Color]);
-
-  const handleButtonClick = () => {
-    setColor((Color) => (Color === "#171923" ? "#171923" : "#171923"));
-    document.querySelector("nav").style.backgroundColor = "";
-    document.querySelector(".con").style.backgroundColor = "";
-    document.querySelectorAll(".res-con").forEach((e) => {
-      e.style.backgroundColor = "";
-    });
-    document.querySelectorAll(".s").forEach((e) => {
-      e.style.color = "";
-    });
-    document.querySelector(".dum").style.backgroundColor = "";
-    document.querySelector("modal , h2").style.color = "";
-    document.querySelector(".img").style.zIndex = "-1";
-    document.querySelector(".img1").style.zIndex = "1";
-    document.querySelector(".bar").style.backgroundColor = "";
-    document.querySelector(".fan").style.backgroundColor = "";
-
-    document.querySelectorAll(".barr").forEach((e) => {
-      e.style.backgroundColor = "";
-    });
-    document.querySelectorAll(".fan, .mate, .it , .english").forEach((e) => {
-      e.style.color = "";
-    });
-    document.querySelectorAll(" .mate, .it , .english").forEach((e) => {
-      e.addEventListener("mouseover", function () {
-        e.style.backgroundColor = "";
-      });
-    });
-    document.querySelectorAll(" .mate, .it , .english").forEach((e) => {
-      e.addEventListener("mouseout", function () {
-        e.style.backgroundColor = "";
-      });
-    });
-  };
-  const handleButtonClick1 = () => {
-    setColor((Color) => (Color === "white" ? "white" : "white"));
-    document.querySelector("nav").style.backgroundColor = "#ebeff1";
-    document.querySelector(".bar").style.backgroundColor = "#ebeff1";
-    document.querySelector(".fan").style.backgroundColor = "white";
-    document.querySelector(".con").style.backgroundColor = "#E2E8F0";
-    document.querySelectorAll(".res-con").forEach((e) => {
-      e.style.backgroundColor = "#F7FAFC";
-    });
-    document.querySelectorAll(".fan, .mate, .it , .english").forEach((e) => {
-      e.style.color = "#1A202C";
-    });
-    document.querySelectorAll(".barr").forEach((e) => {
-      e.style.backgroundColor = "#1A202C";
-    });
-    document.querySelectorAll(" .mate, .it , .english").forEach((e) => {
-      e.addEventListener("mouseover", function () {
-        e.style.backgroundColor = "white";
-      });
-    });
-    document.querySelectorAll(" .mate, .it , .english").forEach((e) => {
-      e.addEventListener("mouseout", function () {
-        e.style.backgroundColor = "";
-      });
-    });
-    document.querySelectorAll(".s").forEach((e) => {
-      e.style.color = "#302033";
-    });
-    document.querySelector("modal , h2").style.color = "#556E8B";
-    document.querySelector(".img1").style.zIndex = "-1";
-    document.querySelector(".img").style.zIndex = "1";
-    document.querySelector(".dum").style.backgroundColor = "rgb(204, 210, 215)";
-  };
-
-  // const handleEdit = (index) => {
-  //   const editedNames = [...Names];
-  //   editedNames[index] = { firstName, lastName };
-  //   setNames(editedNames);
-  //   localStorage.setItem("names", JSON.stringify(editedNames));
-  //   setFirstName("");
-  //   setLastName("");
-  //   setOpen(true);
-  //   setModal(false);
-  // };
-
-  // const handleDelete = (index) => {
-  //   const updatedNames = Names.filter((_, i) => i ===index);
-  //   setNames(updatedNames);
-  //   localStorage.setItem("names", JSON.stringify(updatedNames));
-  // };
-
-  const filter = Names.filter(
-    ({ firstName, lastName }) =>
-      firstName.toLowerCase().includes(search.toLowerCase()) ||
-      lastName.toLowerCase().includes(search.toLowerCase())
-  );
-
   const cansel = () => {
     setOpen(false);
     setModal(false);
@@ -157,7 +59,16 @@ const Menyu = () => {
   const [colors1, setColors1] = useState();
   const [colors2, setColors2] = useState();
   const [colors3, setColors3] = useState();
-
+  const inputref = useRef(null);
+  const click = (e) => {
+    e.preventDefault();
+    reset();
+  };
+  const reset = () => {
+    if (inputref.current) {
+      inputref.current.value = "";
+    }
+  };
   return (
     <div>
       <nav>
@@ -169,6 +80,19 @@ const Menyu = () => {
           </div>
           <Link className="a" to="/">
             {" "}
+            <div
+              className="dum"
+              onClick={() =>
+                setColors3("") ||
+                setColors1("") ||
+                setColors("") ||
+                setColors2("")
+              }
+            >
+              <img src={cap} alt="" className="ca" />
+            </div>
+          </Link>
+          <Link className="a" to="/">
             <h2
               onClick={() =>
                 setColors3("") ||
@@ -183,30 +107,22 @@ const Menyu = () => {
           <button onClick={openModal} className="add">
             <i> Add New</i>
           </button>
-          <div>
+          <form>
             <input
               type="text"
               placeholder="Search"
               value={search}
               onChange={handleSearch}
               className="search"
+              ref={inputref}
             />
             <i class="fa-solid fa-magnifying-glass" id="i"></i>
-          </div>
-          <div className="dum">
-            <img
-              src={img}
-              alt=""
-              className="img "
-              onClick={handleButtonClick}
-            />
-            <img
-              src={img1}
-              alt=""
-              className="img1"
-              onClick={handleButtonClick1}
-            />
-          </div>
+            <button
+              type="submit"
+              onClick={click}
+              style={{ display: "none" }}
+            ></button>
+          </form>
         </div>
         <div className="border"></div>
       </nav>
@@ -231,7 +147,10 @@ const Menyu = () => {
             <div
               className="english"
               onClick={() =>
-                setColors("#212632") || setColors1("") || setColors2("")
+                setColors("#212632") ||
+                setColors1("") ||
+                setColors2("") ||
+                setColors3("#1A202C")
               }
               style={{ backgroundColor: colors }}
             >
@@ -242,11 +161,13 @@ const Menyu = () => {
             <div
               className="mate"
               onClick={() =>
-                setColors1("#212632") || setColors("") || setColors2("")
+                setColors1("#212632") ||
+                setColors("") ||
+                setColors2("") ||
+                setColors3("#1A202C")
               }
               style={{ backgroundColor: colors1 }}
             >
-              {" "}
               <img src={mat} alt="" /> Matematika
             </div>
           </Link>
@@ -254,7 +175,10 @@ const Menyu = () => {
             <div
               className="it"
               onClick={() =>
-                setColors2("#212632") || setColors1("") || setColors("")
+                setColors2("#212632") ||
+                setColors1("") ||
+                setColors("") ||
+                setColors3("#1A202C")
               }
               style={{ backgroundColor: colors2 }}
             >
@@ -310,45 +234,3 @@ const Menyu = () => {
 };
 
 export default Menyu;
-
-{
-  /* <button className="sub">yubor</button> */
-}
-{
-  /* <Appi /> */
-}
-
-{
-  /* {filter.map(({ firstName, lastName }, index) => (
-            <div key={index} className="res-con">
-              <div className="pe">
-                <p className="p">
-                  {" "}
-                  <span className="span">First Name:</span>
-                  <span className="s"> {firstName}</span>
-                </p>
-              </div>
-              <div className="pe1">
-                {" "}
-                <p className="p1">
-                  <span className="span">Last Name:</span>
-                  <span className="s"> {lastName}</span>
-                </p>
-              </div>
-              <button onClick={() => handleEdit(index)}>Edit</button>
-              <button onClick={() => handleDelete(index)}>Delete</button>
-            </div>
-          ))} */
-}
-
-{
-  /* <form onClick={handleSubmit}> */
-}
-// <Data />
-{
-  /* <button onClick={handleClick1}>{buttonText}</button> */
-}
-
-{
-  /* </form> */
-}
