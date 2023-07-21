@@ -47,13 +47,17 @@ const Menyu = () => {
     setOpen(false);
     setModal(false);
   };
+  
+  const [isactiv , setIsactiv] = useState(false)
+  const [isactiv1 , setIsactiv1] = useState(false)
 
-  function bar1() {
-    const bar = document.querySelector(".bar");
-    let bar1 = document.querySelector(".bar1");
-    bar1.classList.toggle("active");
-    bar.classList.toggle("active");
+  const  bar1 = () => {
+setIsactiv(!isactiv)
+setIsactiv1(!isactiv1)
+
   }
+
+
 
   const [colors, setColors] = useState();
   const [colors1, setColors1] = useState();
@@ -73,7 +77,7 @@ const Menyu = () => {
     <div>
       <nav>
         <div className="modal">
-          <div className="bar1" onClick={bar1}>
+          <div className={`bar1 ${isactiv? 'active' : ''}`} onClick={bar1}>
             <div className="barr" style={{ transition: ".4s" }}></div>
             <div className="barr" style={{ transition: ".2s" }}></div>
             <div className="barr" style={{ transition: ".4s" }}></div>
@@ -99,6 +103,7 @@ const Menyu = () => {
                 setColors1("") ||
                 setColors("") ||
                 setColors2("")
+
               }
             >
               <i>Forms</i>
@@ -128,7 +133,7 @@ const Menyu = () => {
       </nav>
 
       <div className="wrapper">
-        <div className="bar">
+        <div className={`bar ${isactiv1 ? "active" :''}`}>
           <Link className="a" to="/tarix">
             <div
               className="fan"
@@ -136,8 +141,9 @@ const Menyu = () => {
                 setColors3("#212632") ||
                 setColors1("") ||
                 setColors("") ||
-                setColors2("")
-              }
+                setColors2("") ||
+                setIsactiv(!isactiv)||
+                setIsactiv1(!isactiv1)    }
               style={{ backgroundColor: colors3 }}
             >
               <img src={tarix} alt="" /> Tarix{" "}
@@ -150,7 +156,9 @@ const Menyu = () => {
                 setColors("#212632") ||
                 setColors1("") ||
                 setColors2("") ||
-                setColors3("#1A202C")
+                setColors3("#1A202C")||
+                setIsactiv(!isactiv)||
+                setIsactiv1(!isactiv1)
               }
               style={{ backgroundColor: colors }}
             >
@@ -164,7 +172,9 @@ const Menyu = () => {
                 setColors1("#212632") ||
                 setColors("") ||
                 setColors2("") ||
-                setColors3("#1A202C")
+                setColors3("#1A202C")||
+                setIsactiv(!isactiv)||
+                setIsactiv1(!isactiv1)
               }
               style={{ backgroundColor: colors1 }}
             >
@@ -178,7 +188,9 @@ const Menyu = () => {
                 setColors2("#212632") ||
                 setColors1("") ||
                 setColors("") ||
-                setColors3("#1A202C")
+                setColors3("#1A202C")||
+                setIsactiv(!isactiv)||
+                setIsactiv1(!isactiv1)
               }
               style={{ backgroundColor: colors2 }}
             >
